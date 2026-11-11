@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Compare Rates — Benefits Auto Agent',
+};
 
 const CHECKLIST = [
   { title: 'Same coverage limits', desc: 'Make sure each quote lists the same liability, collision, and comprehensive limits so you are comparing like for like.' },

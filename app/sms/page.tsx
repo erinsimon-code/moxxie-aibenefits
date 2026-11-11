@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'SMS Program — Benefits Auto Agent',
+};
 
 const ROWS: [string, React.ReactNode][] = [
   ['Program Name', 'Benefits Auto Agent Savings Texts'],
@@ -15,13 +20,19 @@ const ROWS: [string, React.ReactNode][] = [
   ['Resubscribe', 'Reply START.'],
   ['Help', <>Reply HELP, email <a href="mailto:support@benefitsautoagent.com" className="text-teal-600 underline">support@benefitsautoagent.com</a>, or call <a href="tel:+13022080220" className="text-teal-600 underline">(302) 208-0220</a>.</>],
   ['Consent', 'Consent to receive text messages is not a condition of purchase.'],
-  ['Data Sharing', 'No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.'],
+  ['Data Sharing', 'No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties. All the above categories exclude text messaging originator opt-in data and consent.'],
 ];
 
 const SAMPLES = [
-  'Benefits Auto Agent: You\u2019re signed up. Reply HELP for help, STOP to opt out.',
-  'Benefits Auto Agent: Ask your insurer about bundling home and auto coverage. Reply HELP for help, STOP to opt out.',
+  'Benefits Auto Agent: You\u2019re signed up. Msg frequency varies. Msg & data rates may apply. Reply HELP for help, STOP to opt out.',
+  'Benefits Auto Agent: Tip: ask your insurer about bundling home and auto coverage. More tips: benefitsautoagent.com/tips Reply STOP to opt out.',
   'Benefits Auto Agent: Your policy may be up for renewal soon. Compare quotes using our checklist at benefitsautoagent.com/compare. Reply STOP to opt out.',
+  'Benefits Auto Agent: New this month: our printable quote comparison worksheet. Get it at benefitsautoagent.com/compare Reply STOP to opt out.',
+];
+
+const SYSTEM_REPLIES = [
+  ['HELP reply', 'Benefits Auto Agent: For help, email support@benefitsautoagent.com or call (302) 208-0220. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out.'],
+  ['STOP reply', 'Benefits Auto Agent: You are unsubscribed and will receive no further messages. Reply START to resubscribe.'],
 ];
 
 export default function SmsSummaryPage() {
@@ -76,6 +87,17 @@ export default function SmsSummaryPage() {
               </div>
             ))}
           </div>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">System Replies</h2>
+          <div className="space-y-3 mb-10">
+            {SYSTEM_REPLIES.map(([label, sample]) => (
+              <div key={label} className="glass-card p-4">
+                <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{label}</p>
+                <p className="text-sm text-gray-700">{sample}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-wrap gap-6">
             <Link href="/sms-terms" className="text-sm font-semibold text-teal-600 hover:text-teal-700 underline">
               Full SMS Terms

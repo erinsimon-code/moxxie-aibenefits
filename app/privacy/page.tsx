@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy — Benefits Auto Agent',
+};
 
 export default function PrivacyPage() {
   return (
@@ -20,7 +25,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </div>
           <h1 className="text-5xl font-bold text-gray-900 tracking-tight mb-4">Privacy Policy</h1>
-          <p className="text-lg text-gray-500">Last Updated: October 29, 2026</p>
+          <p className="text-lg text-gray-500">Last Updated: November 10, 2026</p>
         </div>
       </section>
 
@@ -66,14 +71,13 @@ export default function PrivacyPage() {
                 <li>Name and contact information (email address, phone number)</li>
                 <li>ZIP code</li>
                 <li>Text message opt-in preferences</li>
-                <li>Account credentials if you create an account</li>
               </ul>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.2 Mobile Information Sharing</h3>
               <div className="p-4 rounded-xl" style={{ background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.2)' }}>
                 <p className="text-sm font-bold text-red-800 mb-1">No Mobile Data Sharing Policy</p>
                 <p className="text-sm text-red-700">
-                  <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong> All categories of mobile information are excluded from sharing with third-party marketers. We are committed to protecting your mobile information and will only use it for the purposes outlined in this Privacy Policy, such as delivering the savings tips and account messages you sign up for.
+                  <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong> Text messaging originator opt-in data and consent will not be shared with any third parties. All the above categories exclude text messaging originator opt-in data and consent. We are committed to protecting your mobile information and will only use it for the purposes outlined in this Privacy Policy, such as delivering the savings tips and account messages you sign up for.
                 </p>
               </div>
 
@@ -111,7 +115,7 @@ export default function PrivacyPage() {
                 <li>Responses to your requests</li>
               </ul>
               <p className="text-gray-600 mt-4">
-                <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong>
+                <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong> Text messaging originator opt-in data and consent will not be shared with any third parties. All the above categories exclude text messaging originator opt-in data and consent.
               </p>
               <p className="text-gray-600 mt-4">
                 Message and data rates may apply. Message frequency varies (up to 4 msgs/week). To opt out of SMS notifications at any time, reply <strong>STOP</strong> to any message. For help, reply <strong>HELP</strong> or contact us at <a href="mailto:support@benefitsautoagent.com" className="text-blue-600 hover:underline">support@benefitsautoagent.com</a>.
@@ -123,7 +127,7 @@ export default function PrivacyPage() {
               <p className="text-gray-600 mb-4">We may share your information with:</p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">5.1 Service Providers</h3>
-              <p className="text-gray-600">Third-party vendors who perform services on our behalf, such as hosting, analytics, and customer support. These providers are contractually obligated to protect your information and may not use it for their own purposes.</p>
+              <p className="text-gray-600">Third-party vendors who perform services on our behalf, such as hosting, analytics, customer support, and email and SMS delivery providers. These providers are contractually obligated to protect your information and may not use it for their own purposes.</p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">5.2 Legal Requirements</h3>
               <p className="text-gray-600">When required by law, court order, or government regulation, or when we believe disclosure is necessary to protect our rights or the safety of others.</p>
@@ -134,6 +138,9 @@ export default function PrivacyPage() {
               <div className="mt-4 p-4 rounded-xl" style={{ background: 'rgba(30,64,175,0.06)', border: '1px solid rgba(30,64,175,0.15)' }}>
                 <p className="text-sm text-blue-800 font-semibold">We do not sell, rent, or trade your personal information to third parties for their marketing purposes.</p>
               </div>
+              <p className="text-gray-600 mt-4">
+                <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong> Text messaging originator opt-in data and consent will not be shared with any third parties. All the above categories exclude text messaging originator opt-in data and consent.
+              </p>
             </div>
 
             <div>

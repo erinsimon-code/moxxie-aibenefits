@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service — Benefits Auto Agent',
+};
 
 export default function TermsPage() {
   return (
@@ -85,7 +90,7 @@ export default function TermsPage() {
                 <li>• To opt out at any time, reply <strong>STOP</strong> to any message.</li>
                 <li>• For help, reply <strong>HELP</strong> or contact <a href="mailto:support@benefitsautoagent.com" className="underline">support@benefitsautoagent.com</a>.</li>
                 <li>• Opting in to SMS is optional and not required to use the Service. Consent is not a condition of purchase.</li>
-                <li>• <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong></li>
+                <li>• <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong> Text messaging originator opt-in data and consent will not be shared with any third parties. All the above categories exclude text messaging originator opt-in data and consent.</li>
               </ul>
             </div>
           </div>

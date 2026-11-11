@@ -10,6 +10,9 @@ export default function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed">
               Practical ways to save on car insurance — savings tips, rate comparison resources, and optional text reminders to help you review your coverage. Operated by Benefits Agent AI LLC.
             </p>
+            <p className="text-gray-500 text-xs leading-relaxed mt-4">
+              Benefits Auto Agent is operated by Benefits Agent AI LLC. Benefits Auto Agent is not an insurance company, agent, or broker and does not sell insurance or provide quotes. Information is general and for educational purposes. Rates, discounts, and savings vary by driver, insurer, and state.
+            </p>
           </div>
           <div>
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-400">Resources</h4>
@@ -53,7 +56,7 @@ export default function Footer() {
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link href="/sms-terms" className="hover:text-white transition-colors">SMS Terms</Link>
-            <Link href="/about" className="hover:text-white transition-colors">Contact</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
       </div>

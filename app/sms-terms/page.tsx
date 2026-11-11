@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'SMS Terms — Benefits Auto Agent',
+};
 
 export default function SmsTermsPage() {
   return (
@@ -95,7 +100,7 @@ export default function SmsTermsPage() {
             <div className="p-4 rounded-xl" style={{ background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.2)' }}>
               <p className="text-sm font-bold text-red-800 mb-1">No Mobile Data Sharing</p>
               <p className="text-sm text-red-700">
-                <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong> Your phone number and SMS opt-in status are used solely to deliver the text messages described in these Terms and our{' '}
+                <strong>No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.</strong> Text messaging originator opt-in data and consent will not be shared with any third parties. All the above categories exclude text messaging originator opt-in data and consent. Your phone number and SMS opt-in status are used solely to deliver the text messages described in these Terms and our{' '}
                 <Link href="/privacy" className="underline">Privacy Policy</Link>.
               </p>
             </div>
@@ -107,15 +112,19 @@ export default function SmsTermsPage() {
             <div className="space-y-3">
               <div className="glass-card p-4">
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Account</p>
-                <p className="text-sm text-gray-700">Benefits Auto Agent: You&apos;re signed up. Reply HELP for help, STOP to opt out.</p>
+                <p className="text-sm text-gray-700">Benefits Auto Agent: You&apos;re signed up. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.</p>
               </div>
               <div className="glass-card p-4">
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Marketing</p>
-                <p className="text-sm text-gray-700">Benefits Auto Agent: Ask your insurer about bundling home and auto coverage. Reply HELP for help, STOP to opt out.</p>
+                <p className="text-sm text-gray-700">Benefits Auto Agent: Tip: ask your insurer about bundling home and auto coverage. More tips: benefitsautoagent.com/tips Reply STOP to opt out.</p>
               </div>
               <div className="glass-card p-4">
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Marketing</p>
                 <p className="text-sm text-gray-700">Benefits Auto Agent: Your policy may be up for renewal soon. Compare quotes using our checklist at benefitsautoagent.com/compare. Reply STOP to opt out.</p>
+              </div>
+              <div className="glass-card p-4">
+                <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Marketing (Offer)</p>
+                <p className="text-sm text-gray-700">Benefits Auto Agent: New this month: our printable quote comparison worksheet. Get it at benefitsautoagent.com/compare Reply STOP to opt out.</p>
               </div>
             </div>
           </div>
